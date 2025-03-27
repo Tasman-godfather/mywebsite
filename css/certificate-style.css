@@ -1,0 +1,77 @@
+/* 证书展示样式 */
+.certificates-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.certificate-card {
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.certificate-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.certificate-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.certificate-card:hover img {
+  transform: scale(1.05);
+}
+
+.certificate-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(44, 62, 80, 0.8);
+  color: white;
+  padding: 10px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.certificate-card:hover .certificate-overlay {
+  transform: translateY(0);
+}
+
+.certificate-overlay h4 {
+  margin: 0 0 5px 0;
+  font-size: 16px;
+}
+
+.certificate-overlay p {
+  margin: 0;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.more-certificates {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.more-certificates a {
+  color: var(--secondary-color);
+  font-weight: 600;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.more-certificates a:hover {
+  color: var(--accent-color);
+}
